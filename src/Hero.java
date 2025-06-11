@@ -1,13 +1,26 @@
 public class Hero {
     String name;
     int hp;
-    Sword sword;
-    public void attack() {
-        System.out.println(this.name + "は攻撃した！");
-        System.out.println("敵に5ポイントのダメージをあたえた！");
-    }
-    //newされた瞬間に自動的に1回だけ呼び出される
-    public Hero() {
-        this.hp = 100;    // hpフィールドを100で初期化
-    }
-}
+
+    public void sleep(){
+        this.hp = 100;
+        System.out.println(this.name+"は、眠って回復した！");
+    }//眠る（回復）
+
+    public void sit(int sec){
+        this.hp += sec;
+        System.out.println(this.name+"は、"+this.hp+"秒座った！");
+        System.out.println("HPが"+sec+"ポイント回復した");
+    }//座る（回復）
+
+    public void slip(){
+        this.hp -= 5;
+        System.out.println("５のダメージ");
+    }//転ぶ
+
+    public void run(){
+        System.out.println(this.name+"逃げ出した！");
+        System.out.println("GAMEOVER");
+        System.out.println("最終HPは"+this.hp+"でした");
+    }//逃げる
+}//プレイヤー・行動

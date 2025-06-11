@@ -2,19 +2,24 @@
 // ガターの <icon src="AllIcons.Actions.Execute"/> アイコンをクリックします。
 public class Main {
     public static void main(String[] args) {
-        //インスタンスを生成 + 初期値
-        Hero h1 = new Hero();
-        h1.name = "ミナト";
-        h1.hp = 100;
-        Hero h2 = new Hero();
-        h2.name = "アサカ";
-        h2.hp = 100;
-        Wizard w = new Wizard();
-        w.name = "スガワラ";
-        w.hp = 50;
-        //ここから動きを書ける
-        w.heal(h1);
-        w.heal(h2);
-        w.heal(h2);
+        //勇者生成
+        Hero h = new Hero();
+        h.name = "ミナト";
+        h.hp = 100;
+        System.out.println("勇者"+h.name+"を生み出しました！");
+        //お化けキノコA
+        Matango m1 = new Matango();
+        m1.hp = 50;
+        m1.suffix = 'A';
+        //お化けキノコB
+        Matango m2 = new Matango();
+        m2.hp = 50;
+        m2.suffix = 'B';
+
+        h.slip();
+        m1.run();
+        m2.run();
+        h.run();
+
     }
-}
+}//プレイヤー
