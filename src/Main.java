@@ -2,24 +2,11 @@
 // ガターの <icon src="AllIcons.Actions.Execute"/> アイコンをクリックします。
 public class Main {
     public static void main(String[] args) {
-        //勇者生成
-        Hero h = new Hero();
-        h.name = "ミナト";
-        h.hp = 100;
-        System.out.println("勇者"+h.name+"を生み出しました！");
-        //お化けキノコA
-        Matango m1 = new Matango();
-        m1.hp = 50;
-        m1.suffix = 'A';
-        //お化けキノコB
-        Matango m2 = new Matango();
-        m2.hp = 50;
-        m2.suffix = 'B';
-
-        h.slip();
-        m1.run();
-        m2.run();
-        h.run();
-
+        // 引数あり
+        Hero h1 = new Hero("ミナト");
+        System.out.println(h1.name);
+        // 引数なし
+        Hero h2 = new Hero();
+        System.out.println(h2.name);
     }
-}//プレイヤー
+}
